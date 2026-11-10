@@ -1,0 +1,7 @@
+CATEGORIE (id_categorie_CATEGORIE, nom_categorie_CATEGORIE, description_CATEGORIE) 
+
+FOURNISSEUR (id_fournisseur_FOURNISSEUR, nom_fournisseur_FOURNISSEUR, tel_FOURNISSEUR, email_FOURNISSEUR, adresse_FOURNISSEUR) 
+
+PRODUIT (id_produit_PRODUIT, reference_PRODUIT, nom_produit_PRODUIT, description_PRODUIT, prix_achat_PRODUIT, prix_vente_PRODUIT, seuil_alerte_PRODUIT, #id_categorie_CATEGORIE, #id_fournisseur_FOURNISSEUR) 
+
+MOUVEMENT_STOCK (id_mouvement_MOUVEMENT_STOCK, date_mouvement_MOUVEMENT_STOCK, type_mouvement_MOUVEMENT_STOCK, quantite_MOUVEMENT_STOCK, motif_MOUVEMENT_STOCK, #id_produit_PRODUIT) 

@@ -1,0 +1,28 @@
+# Fichiers temporaires Windows
+Thumbs.db
+Desktop.ini
+*.tmp
+*.temp
+
+# Fichiers temporaires macOS
+.DS_Store
+
+# Environnements Python (si utilisés ultérieurement)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Fichiers de configuration locaux
+.env
+.env.*
+
+# Journaux et sauvegardes
+*.log
+*.bak
+*.old
+*.sql~
+
+# Paramètres des éditeurs
+.idea/
+.vscode/
