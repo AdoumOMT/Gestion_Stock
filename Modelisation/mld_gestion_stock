@@ -1,7 +1,42 @@
-CATEGORIE (id_categorie_CATEGORIE, nom_categorie_CATEGORIE, description_CATEGORIE) 
+MODÈLE LOGIQUE DE DONNÉES (MLD)
+Projet : Gestion de stock
 
-FOURNISSEUR (id_fournisseur_FOURNISSEUR, nom_fournisseur_FOURNISSEUR, tel_FOURNISSEUR, email_FOURNISSEUR, adresse_FOURNISSEUR) 
+CATEGORIE (
+    id_categorie [PK],
+    nom_categorie,
+    description_categorie
+)
 
-PRODUIT (id_produit_PRODUIT, reference_PRODUIT, nom_produit_PRODUIT, description_PRODUIT, prix_achat_PRODUIT, prix_vente_PRODUIT, seuil_alerte_PRODUIT, #id_categorie_CATEGORIE, #id_fournisseur_FOURNISSEUR) 
+FOURNISSEUR (
+    id_fournisseur [PK],
+    nom_fournisseur,
+    tel,
+    email,
+    adresse
+)
 
-MOUVEMENT_STOCK (id_mouvement_MOUVEMENT_STOCK, date_mouvement_MOUVEMENT_STOCK, type_mouvement_MOUVEMENT_STOCK, quantite_MOUVEMENT_STOCK, motif_MOUVEMENT_STOCK, #id_produit_PRODUIT) 
+PRODUIT (
+    id_produit [PK],
+    reference [UNIQUE],
+    nom_produit,
+    description,
+    prix_achat,
+    prix_vente,
+    seuil_alerte,
+    id_categorie [FK],
+    id_fournisseur [FK]
+)
+
+MOUVEMENT_STOCK (
+    id_mouvement [PK],
+    date_mouvement,
+    type_mouvement,
+    quantite,
+    motif,
+    id_produit [FK]
+)
+
+LÉGENDE :
+[PK] : Clé primaire
+[FK] : Clé étrangère
+[UNIQUE] : Valeur unique
