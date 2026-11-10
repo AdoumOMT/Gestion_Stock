@@ -56,7 +56,7 @@ Les diagrammes ont été réalisés avec le logiciel AnalyseSI.
 
 ### Modèle Logique de Données (MLD)
 
-![Modèle Logique de Données](Modelisation/mld_gestion_stock.txt)
+[Modèle Logique de Données](Modelisation/mld_gestion_stock.txt)
 
 ## 5. Technologies et outils utilisés
 
