@@ -56,7 +56,45 @@ Les diagrammes ont été réalisés avec le logiciel AnalyseSI.
 
 ### Modèle Logique de Données (MLD)
 
-[Modèle Logique de Données](Modelisation/mld_gestion_stock.txt)
+CATEGORIE (
+    id_categorie [PK],
+    nom_categorie,
+    description
+)
+
+FOURNISSEUR (
+    id_fournisseur [PK],
+    nom_fournisseur,
+    telephone,
+    email,
+    adresse
+)
+
+PRODUIT (
+    id_produit [PK],
+    reference [UNIQUE],
+    nom_produit,
+    description,
+    prix_achat,
+    prix_vente,
+    seuil_alerte,
+    id_categorie [FK],
+    id_fournisseur [FK]
+)
+
+MOUVEMENT_STOCK (
+    id_mouvement [PK],
+    date_mouvement,
+    type_mouvement,
+    quantite,
+    motif,
+    id_produit [FK]
+)
+
+LÉGENDE :
+[PK] : Clé primaire
+[FK] : Clé étrangère
+[UNIQUE] : Valeur unique
 
 ## 5. Technologies et outils utilisés
 
